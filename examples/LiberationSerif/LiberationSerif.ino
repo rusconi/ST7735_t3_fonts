@@ -1,5 +1,5 @@
 #include <SPI.h>
-#include <ILI9341_t3.h>
+#include <ST7735_t3.h>
 #include <font_LiberationSerifBold.h>
 #include <font_LiberationSerifBoldItalic.h>
 #include <font_LiberationSerif.h>
@@ -9,20 +9,20 @@
 #define TFT_CS 10
 
 // Use hardware SPI (#13, #12, #11) and the above for CS/DC
-ILI9341_t3 tft = ILI9341_t3(TFT_CS, TFT_DC);
+ST7735_t3 tft = ST7735_t3(TFT_CS, TFT_DC);
 
 void setup() {
   tft.begin();
   tft.setRotation(1);
-  tft.fillScreen(ILI9341_BLACK);
-  tft.setTextColor(ILI9341_YELLOW);
+  tft.fillScreen(ST7735_BLACK);
+  tft.setTextColor(ST7735_YELLOW);
   //tft.setTextSize(2);
   //tft.println("Waiting for Arduino Serial Monitor...");
 
   Serial.begin(9600);
   //while (!Serial) ; // wait for Arduino Serial Monitor
-  //tft.fillScreen(ILI9341_BLACK);
-  Serial.println("ILI9341 Test!"); 
+  //tft.fillScreen(ST7735_BLACK);
+  Serial.println("ST7735 Test!"); 
 
   int xx = 0;
   tft.setFont(LiberationSerif_24);
