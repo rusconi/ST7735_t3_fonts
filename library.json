@@ -1,0 +1,18 @@
+{
+  "name": "ST7735_t3_fonts",
+  "keywords": "display, tft, lcd, graphics, font",
+  "description": "Extra fonts for use with ST7735_t3",
+  "exclude": "extras",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/rusconi/ST7735_t3_fonts.git"
+  },
+  "dependencies":
+  {
+    "name": "ST7735_t3",
+    "frameworks": "arduino"
+  },
+  "frameworks": "*",
+  "platforms": "*"
+}
